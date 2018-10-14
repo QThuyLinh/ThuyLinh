@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu ngang</title>
+    <style type="text/css">
+        /*Reset CSS*/
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        /*Style Css cơ bản cho web*/
+        body{
+            font-family: sans-serif;
+            color: #333;
+        }
+        /*Style cho menu*/
+        #menu ul{
+            background: blue;
+            list-style-type: none;
+            text-align: center;
+        }
+        #menu ul li{
+            color: #f1f1f1;
+            display: inline-block; /*  float: left kéo ngang menu*/
+            width: 120px;
+            height: 40px;
+            line-height: 40px; /* Khoảng cách giữa các menu*/
+            position: relative; /*Làm cha*/
+        }
+        #menu ul li a{
+            text-decoration: none;
+            color: #fff;
+        }
+        #menu ul li  a:hover{
+            background: #F1F1F1;
+            color: red;
+        }
+        .dropdown{
+            display: none;
+            position: absolute; /*làm con*/
+        }
+
+        #menu ul li:hover .dropdown{
+            display: block;
+        }
+
+        .dropdown li {
+            position: relative;
+        }
+
+        .dropdown-1{
+            display: none;
+            position: absolute;
+        }
+        .dropdown li:hover .dropdown-1{
+            display: inline-block;
+
+        }
+    </style>
+</head>
+<body>
+    <div id="menu">
+        <ul>
+            <li><a href="#">Thế Giới</a></li>
+            <li><a href="#">Thời Sự</a>
+                <ul class="dropdown">
+                    <li><a href="#">Tài Chính</a>
+                        <ul class="dropdown-1">
+                            <li><a href="#">Tài Chính 1</a></li>
+                            <li><a href="#">Tài Chính 2</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Ngân Hàng</a></li>
+                    <li><a href="#">Kế Toán</a>
+
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#">Khoa Học</a></li>
+            <li><a href="#">Văn Hóa</a></li>
+            <li><a href="#">Thời Trang</a></li>
+        </ul>
+    </div>
+</body>
+</html>
