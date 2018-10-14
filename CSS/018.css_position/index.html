@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Position</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
+    <style>
+        body{
+            height: 2000px;
+        }
+        .relative-object-1{
+            border: 1px solid green;
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            color: black;
+        }
+        .relative-object{
+            border: 1px solid green;
+            width: 200px;
+            height: 200px;
+            position: relative;
+            top: 50px;
+            left: 50px;
+            color: #FFF;
+        }
+    </style>
+</head>
+<body>
+    <div class="relative-object-1">
+        Ban đầu
+    </div>
+    <div class="relative-object">
+        Thay đổi
+    </div>
+</body>
+</html>
